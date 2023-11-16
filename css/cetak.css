@@ -1,0 +1,30 @@
+@media print {
+    /* Semua elemen di halaman akan disembunyikan */
+    body * {
+        visibility: hidden;
+    }
+    /* Hanya tabel yang akan dicetak yang akan ditampilkan */
+    #table-to-print, #table-to-print * {
+        visibility: visible;
+    }
+    /* Gaya tambahan untuk tabel saat dicetak */
+    #table-to-print {
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin: 0 auto; /* Agar tabel rata tengah */
+    }
+    /* Membuat garis tabel terlihat */
+    table {
+        border-collapse: collapse;
+        width: 100%; /* Agar tabel mengisi lebar kertas */
+    }
+    th {
+        font-weight: bold; /* Mengatur tebal pada bagian kepala tabel */
+    }
+    table, th, td {
+        border: 1px solid black;
+        text-align: center; /* Teks rata tengah secara horizontal */
+        vertical-align: middle; /* Teks rata tengah secara vertikal */
+    }
+}
